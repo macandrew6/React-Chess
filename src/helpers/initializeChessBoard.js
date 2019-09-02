@@ -32,4 +32,6 @@ export default function initializeChessBoard() {
 
   squares[59] = new Queen(1);
   squares[60] = new King(1);
+
+  return squares;
 }
