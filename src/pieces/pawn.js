@@ -11,7 +11,7 @@ export default class Pawn extends Piece {
     };
   }
 
-  isPossibleMove (src, dest, isDestOccupied) {
+  isPossibleMove(src, dest, isDestOccupied) {
     if (this.player === 1) {
       if ((dest === src - 8 && !isDestOccupied) || 
         (dest === src - 16 && this.initialPos[1].indexOf(src) !== -1)) {
@@ -30,7 +30,7 @@ export default class Pawn extends Piece {
     return false;
   }
 
-  getSrcToDestPath (src, dest) {
+  getSrcToDestPath(src, dest) {
     if (dest === src - 16) {
       return [src - 8];
     } else if (dest === src + 16) {

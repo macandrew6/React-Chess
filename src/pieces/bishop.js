@@ -7,11 +7,11 @@ export default class Bishop extends Piece {
       "https://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg"));
   }
 
-  isPossibleMove (src, dest) {
+  isPossibleMove(src, dest) {
     return (Math.abs(src - dest) % 9 === 0 || Math.abs(src - dest) % 7 === 0);
   }
 
-  getSrcToDestPath (src, dest) {
+  getSrcToDestPath(src, dest) {
     let path = [], pathStart, pathEnd, incrementBy;
     if (src > dest) {
       pathStart = dest;

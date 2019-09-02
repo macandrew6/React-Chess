@@ -7,7 +7,7 @@ export default class Queen extends Piece {
       "https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg"));
   }
 
-  isPossibleMove (src, dest) {
+  isPossibleMove(src, dest) {
     let mod = src % 8;
     let diff = 8 - mod;
 

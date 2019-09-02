@@ -7,7 +7,7 @@ export default class Bishop extends Piece {
       "https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg"));
   }
 
-  isPossibleMove (src, dest) {
+  isPossibleMove(src, dest) {
     return (
       src - 17 === dest ||
       src - 10 === dest ||
@@ -20,7 +20,7 @@ export default class Bishop extends Piece {
     );
   }
 
-  getSrcToDestPath () {
+  getSrcToDestPath() {
     return [];
   }
 }
