@@ -2,7 +2,7 @@ import React from 'react';
 import '../index.css';
 import Square from './square';
 
-export default class FallenSoldier extends React.Component {
+export default class FallenSoldiers extends React.Component {
   renderSquare(square, i, squareShade) {
     return (
       <Square
