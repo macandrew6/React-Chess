@@ -8,5 +8,5 @@ export default function Square(props) {
             onClick={props.onClick}
             style={props.style}
         ></button>
-    )
+    );
 }
