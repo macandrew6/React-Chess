@@ -5,14 +5,13 @@ import Square from './square';
 
 export default class Board extends React.Component {
   renderSquare(i, squareShade) {
-    console.log(this.props.squares[i]);
     return <Square 
       key={i}
       piece={this.props.squares[i]}
       style={this.props.squares[i] ? this.props.squares[i].style : null}
       shade={squareShade}
       onClick={() => this.props.onClick(i)}
-    />
+    />;
     
   }
 
