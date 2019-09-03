@@ -6,6 +6,7 @@ export default class FallenSoldiers extends React.Component {
   renderSquare(square, i, squareShade) {
     return (
       <Square
+        key={i}
         piece={square}
         style={square.style}
       />

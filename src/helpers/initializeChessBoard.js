@@ -19,12 +19,12 @@ export default function initializeChessBoard() {
 
   squares[1] = new Knight(2);
   squares[6] = new Knight(2);
-  squares[55] = new Knight(1);
+  squares[57] = new Knight(1);
   squares[62] = new Knight(1);
 
   squares[2] = new Bishop(2);
   squares[5] = new Bishop(2);
-  squares[54] = new Bishop(1);
+  squares[58] = new Bishop(1);
   squares[61] = new Bishop(1);
 
   squares[3] = new Queen(2);

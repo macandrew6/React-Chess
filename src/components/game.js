@@ -34,6 +34,7 @@ export default class Game extends React.Component {
         })
       }
     } else if(this.state.sourceSelection > -1) {
+      console.log(squares[this.state.sourceSelection].style)
       delete squares[this.state.sourceSelection].style.backgroundColor;
       if(squares[i] && squares[i].player === this.state.player) {
         this.setState({
@@ -113,8 +114,8 @@ export default class Game extends React.Component {
             <div className="game-status">{this.state.status}</div>
             <div className="fallen-soldiers">
               <FallenSoldiers 
-                whiteFallenSoldiers = {this.state.whiteFallenSoldiers}
-                blackFallenSoldiers = {this.state.blackFallenSoldiers}
+                whiteFallenSoldiers={this.state.whiteFallenSoldiers}
+                blackFallenSoldiers={this.state.blackFallenSoldiers}
               />
             </div>
           </div>
