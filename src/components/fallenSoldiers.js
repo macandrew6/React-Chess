@@ -4,6 +4,7 @@ import Square from './square';
 
 export default class FallenSoldiers extends React.Component {
   renderSquare(square, i, squareShade) {
+    console.log(i);
     return (
       <Square
         key={i}
