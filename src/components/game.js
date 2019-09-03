@@ -25,17 +25,18 @@ export default class Game extends React.Component {
       if(!squares[i] || squares[i].player !== this.state.player) {
         this.setState({status: "Wrong selection. Choose player " + 
         this.state.player + " pieces."});
-        squares[i] ? delete squares[i].style.backgroundColor : null;
+        if(squares[i]) {
+          squares[i].style = {...squares[i].style, backgroundColor: ""};
+        }
       } else {
-        squares[i].style = {...squares[i].style, backgroundColor: "RGB(111, 143, 114)"}
+        squares[i].style = {...squares[i].style, backgroundColor: "RGB(111, 143, 114)"};
         this.setState({
           status: "Choose destination for the selected piece",
           sourceSelection: i
         });
       }
     } else if(this.state.sourceSelection > -1) {
-      console.log(squares[this.state.sourceSelection])
-      delete squares[this.state.sourceSelection].style.backgroundColor;
+      squares[this.state.sourceSelection].style = {...squares[this.state.sourceSelection].style, backgroundColor: ""};
       if(squares[i] && squares[i].player === this.state.player) {
         this.setState({
           status: "Wrong selection. Choose valid source and destination again",
