@@ -31,10 +31,10 @@ export default class Game extends React.Component {
         this.setState({
           status: "Choose destination for the selected piece",
           sourceSelection: i
-        })
+        });
       }
     } else if(this.state.sourceSelection > -1) {
-      console.log(squares[this.state.sourceSelection].style)
+      console.log(squares[this.state.sourceSelection])
       delete squares[this.state.sourceSelection].style.backgroundColor;
       if(squares[i] && squares[i].player === this.state.player) {
         this.setState({

@@ -2,7 +2,6 @@ import React from 'react';
 import '../index.css';
 
 export default function Square(props) {
-    console.log(this.props.piece);
     return (
         <button
             className={'square ' + props.shade}
