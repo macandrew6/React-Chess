@@ -83,4 +83,43 @@ export default class Game extends React.Component {
       }
     }
   }
+  
+  isMoveLegal(srcToDestPath) {
+    let isLegal = true;
+    for (let i = 0; i < srcToDestPath.length; i++) {
+      if(this.state.squares[srcToDestPath[i]] !== null) {
+        isLegal = false;
+      }
+    }
+    return isLegal;
+  }
+
+  render() {
+    return (
+      <div>
+        <div className="game">
+          <div className="game-board">
+            <Board 
+              squares={this.state.squares}
+              onClick={(i) => this.handleClick(i)}
+            />
+          </div>
+          <div className="game-info">
+            <h3>Turn</h3>
+            <div 
+              id="player-turn-box"
+              style={{backgroundColor: this.state.turn}}
+            ></div>
+            <div className="game-status">{this.state.status}</div>
+            <div className="fallen-soldiers">
+              <FallenSoldiers 
+                whiteFallenSoldiers = {this.state.whiteFallenSoldiers}
+                blackFallenSoldiers = {this.state.blackFallenSoldiers}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
