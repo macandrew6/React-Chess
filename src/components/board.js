@@ -12,7 +12,6 @@ export default class Board extends React.Component {
       shade={squareShade}
       onClick={() => this.props.onClick(i)}
     />;
-    
   }
 
   render() {
@@ -24,7 +23,11 @@ export default class Board extends React.Component {
         "light-square" : "dark-square";
         squareRows.push(this.renderSquare((i * 8) + j, squareShade));
       }
-      board.push(<div className="board-row">{squareRows}</div>);
+      board.push(
+        <div 
+          className="board-row"
+          key={i}
+        >{squareRows}</div>);
     }
     
     return (

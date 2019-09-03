@@ -8,8 +8,6 @@ export default class Bishop extends Piece {
   }
 
   isPossibleMove(src, dest) {
-    console.log("src => ",src);
-    console.log("dest => ",dest);
     return (Math.abs(src - dest) % 9 === 0 || Math.abs(src - dest) % 7 === 0);
   }
 
